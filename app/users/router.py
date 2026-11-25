@@ -20,7 +20,16 @@ async def get_me(
     return user
 
 
+# @router.post('/make-admin')
+# async def make_admin(
+#         current_user: Annotated[User, Depends(get_current_user)],
+#         service: Annotated[UserService, Depends(get_user_service)]
+# ):
+#     await service.make_admin(current_user)
+#     return {'message': 'zaebis'}
 
-@router.get("/", response_model=list[UserResponse])
-async def get_all_users(service: Annotated[UserService, Depends(get_user_service)]):
-    return await service.get_all()
+
+
+# @router.get("/", response_model=list[UserResponse])
+# async def get_all_users(service: Annotated[UserService, Depends(get_user_service)]):
+#     return await service.get_all()

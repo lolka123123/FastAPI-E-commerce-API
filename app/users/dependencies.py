@@ -11,4 +11,7 @@ from app.users.service import UserService
 def get_user_service(session: Annotated[AsyncSession, Depends(get_session)]) -> UserService:
     repository = UserRepository(session)
 
-    return UserService(repository=repository)
+    return UserService(
+        session=session,
+        repository=repository
+    )

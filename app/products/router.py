@@ -17,7 +17,6 @@ router = APIRouter(prefix="/products", tags=["products"])
 async def get_all_products(service: ProductService = Depends(get_product_service)):
     return await service.get_all_products()
 
-
 @router.get('/{product_id}')
 async def get_product_by_id(product_id: int, service: ProductService = Depends(get_product_service)):
     product = await service.get_product_by_id(product_id)

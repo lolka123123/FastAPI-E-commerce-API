@@ -28,3 +28,4 @@ class User(Base):
     )
 
     verification_email_sent_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+

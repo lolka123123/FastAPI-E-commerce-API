@@ -21,4 +21,6 @@ class Settings(BaseSettings):
     smtp_password: SecretStr
     smtp_from: str
 
+    secret_key: str
+
 settings = Settings()

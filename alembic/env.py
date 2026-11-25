@@ -12,6 +12,7 @@ from app.db.base import Base
 import app.products.models
 import app.users.models
 import app.auth.models
+import app.audit.models
 
 
 # this is the Alembic Config object, which provides
